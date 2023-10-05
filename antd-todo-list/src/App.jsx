@@ -1,7 +1,9 @@
+import { Typography } from 'antd';
+
 export default function App() {
   return (
     <div>
-      <h1>My React App!</h1>
+      <Typography.Title>My React App!</Typography.Title>
     </div>
   );
 }
