@@ -1,10 +1,16 @@
 import { Typography } from 'antd';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import TodoItem from './components/TodoItem';
-import { selectTodos } from '../../redux/features/todosSlice';
+import { fetchTodosAsync, selectTodos } from '../../redux/features/todosSlice';
+import { useEffect } from 'react';
 
 export default function TodosPage() {
+  const dispatch = useDispatch();
   const todos = useSelector(selectTodos);
+
+  useEffect(() => {
+    dispatch(fetchTodosAsync());
+  }, []);
 
   return (
     <div>
