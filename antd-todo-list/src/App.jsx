@@ -1,9 +1,5 @@
-import { Typography } from 'antd';
+import TodosPage from './pages/TodosPage/TodosPage';
 
 export default function App() {
-  return (
-    <div>
-      <Typography.Title>My React App!</Typography.Title>
-    </div>
-  );
+  return <TodosPage />;
 }
